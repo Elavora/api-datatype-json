@@ -31,7 +31,26 @@ $normalizado = $valor->value();
 
 ## Dependencias de runtime
 
-- `elavora/api-datatype-core` `^0.1`
+- PHP `>=8.3`
+- `elavora/api-datatype-core` `^2.0` (traz o `elavora/api-framework` `^2.0`)
+
+## Versão e compatibilidade
+
+A versão `1.0.0` exige PHP `>=8.3` e `elavora/api-datatype-core` `^2.0`. Para atualizar a partir da `0.2.0`, troque
+as restrições no `composer.json` do seu projeto:
+
+```json
+{
+  "require": {
+    "php": ">=8.3",
+    "elavora/api-datatype-core": "^2.0",
+    "elavora/api-datatype-json": "^1.0"
+  }
+}
+```
+
+A API pública não muda: `Elavora\Api\DataTypes\Json` continua estendendo `AbstractDataType` e `Json::isValid()`
+continua aceitando só string JSON válida e não vazia. Só as dependências sobem de major.
 
 ## Validacao no projeto consumidor
 

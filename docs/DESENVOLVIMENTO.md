@@ -7,7 +7,7 @@
 Você só precisa de Docker. O pacote usa a imagem `ghcr.io/elavora/php-dev:8.3-latest`, com PHP 8.3, Composer, Xdebug,
 PHP-CS-Fixer e editorconfig-checker. PHPUnit e PHPStan vêm do `composer install`.
 
-O pacote aceita PHP 8.1 ou superior (composer.json), mas o desenvolvimento e o CI rodam no PHP 8.3 da imagem.
+O pacote exige PHP 8.3 ou superior (composer.json), o mesmo PHP da imagem usada no desenvolvimento e no CI.
 
 **VS Code:** abra a pasta e rode **Dev Containers: Reopen in Container**. O `composer install` roda ao criar o
 container, e o arquivo PHP é formatado ao salvar.

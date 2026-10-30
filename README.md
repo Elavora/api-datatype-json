@@ -16,7 +16,10 @@ Guia de uso e exemplos: [docs/USO.md](docs/USO.md).
 composer require elavora/api-datatype-json
 ```
 
-Requisitos: PHP 8.1 ou superior e `elavora/api-datatype-core` `^0.1`.
+Requisitos: PHP 8.3 ou superior e `elavora/api-datatype-core` `^2.0`.
+
+Versão `1.0`: atualiza o pacote para o `elavora/api-datatype-core` 2.0 (que usa o `elavora/api-framework` 2.0) e exige
+PHP 8.3. A API pública (`Json`) não muda.
 
 ## Desenvolvimento e testes
 
@@ -53,7 +56,8 @@ estão em [Desenvolvimento e testes](docs/DESENVOLVIMENTO.md).
 ## Versões
 
 Cada PR integrado na `main` gera uma versão automaticamente, conforme as labels do PR: sem a label `release` sai uma
-beta (`0.3.0-beta.1`), com ela sai a estável (`0.3.0`). As tags novas não têm o prefixo `v`, e as notas de cada
+beta, com ela sai a estável. A versão atual vem do upgrade para o core 2.0 (PR com as labels `upgrade` e `release`) e é
+a `1.0.0`, calculada a partir da legada `v0.2.0`. As tags novas não têm o prefixo `v`, e as notas de cada
 GitHub Release são geradas em português a partir dos PRs. Veja [Versões e release](docs/AUTOMACAO.md#versões-e-release).
 
 ## Documentação
