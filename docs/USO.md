@@ -1,5 +1,7 @@
 # Guia de uso
 
+[README](../README.md) · Veja também: [Desenvolvimento e testes](DESENVOLVIMENTO.md) · [Automação do repositório](AUTOMACAO.md)
+
 DataType JSON para aplicacoes Elavora API.
 
 ## Instalacao
@@ -29,16 +31,35 @@ $normalizado = $valor->value();
 
 ## Dependencias de runtime
 
-- `elavora/api-datatype-core` `^0.1`
+- PHP `>=8.3`
+- `elavora/api-datatype-core` `^2.0` (traz o `elavora/api-framework` `^2.0`)
+
+## Versão e compatibilidade
+
+A versão `1.0.0` exige PHP `>=8.3` e `elavora/api-datatype-core` `^2.0`. Para atualizar a partir da `0.2.0`, troque
+as restrições no `composer.json` do seu projeto:
+
+```json
+{
+  "require": {
+    "php": ">=8.3",
+    "elavora/api-datatype-core": "^2.0",
+    "elavora/api-datatype-json": "^1.0"
+  }
+}
+```
+
+A API pública não muda: `Elavora\Api\DataTypes\Json` continua estendendo `AbstractDataType` e `Json::isValid()`
+continua aceitando só string JSON válida e não vazia. Só as dependências sobem de major.
 
 ## Validacao no projeto consumidor
 
-Depois de instalar o pacote, rode os testes da aplicacao consumidora. Para uma verificacao isolada do pacote, use container:
+Depois de instalar o pacote, rode os testes da aplicacao consumidora.
 
-```bash
-docker run --rm -v "${PWD}:/workspace" -w "/workspace/api-datatype-json" composer:2 composer validate --strict --no-check-publish
-docker run --rm -v "${PWD}:/workspace" -w "/workspace/api-datatype-json" composer:2 sh -lc "find . \\( -path ./.git -o -path ./vendor \\) -prune -o -name '*.php' -print0 | xargs -0 -r -n1 php -l"
-```
+## Validacao do pacote
+
+Como rodar os testes, o lint e o PHPStan, e como reproduzir o CI, esta em
+[Desenvolvimento e testes](DESENVOLVIMENTO.md). Tudo roda em container, sem PHP instalado na maquina.
 
 ## Observacoes
 
