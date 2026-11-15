@@ -16,7 +16,7 @@ Guia de uso e exemplos: [docs/USO.md](docs/USO.md).
 composer require elavora/api-datatype-json
 ```
 
-Requisitos: PHP 8.3 ou superior e `elavora/api-datatype-core` `^2.0`.
+Requisitos: PHP 8.3 ou superior e `elavora/api-datatype-core` `^3.0`.
 
 Versão `1.0`: atualiza o pacote para o `elavora/api-datatype-core` 2.0 (que usa o `elavora/api-framework` 2.0) e exige
 PHP 8.3. A API pública (`Json`) não muda.
