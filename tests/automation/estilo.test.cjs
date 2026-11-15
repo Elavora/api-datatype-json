@@ -91,8 +91,8 @@ test.describe('composer.json', () => {
         assert.ok('elavora/api-datatype-core' in (c.require || {}), 'dependência de runtime perdida');
     });
 
-    test('require tem elavora/api-datatype-core ^2.0 (upgrade no mesmo PR do pipeline)', () => {
-        assert.equal((composer().require || {})['elavora/api-datatype-core'], '^2.0');
+    test('require tem elavora/api-datatype-core ^3.0 (upgrade no mesmo PR do pipeline)', () => {
+        assert.equal((composer().require || {})['elavora/api-datatype-core'], '^3.0');
     });
 
     test('elavora/code-standards ^1.N (N >= 1) em require-dev, fora do require', () => {
