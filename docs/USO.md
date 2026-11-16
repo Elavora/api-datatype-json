@@ -31,8 +31,8 @@ $normalizado = $valor->value();
 
 ## Dependencias de runtime
 
-- PHP `>=8.3`
-- `elavora/api-datatype-core` `^3.0` (traz o `elavora/api-framework` `^3.0`)
+- PHP `>=8.4`
+- `elavora/api-datatype-core` `^4.0` (traz o `elavora/api-framework` `^4.0`)
 
 ## Versão e compatibilidade
 
@@ -42,8 +42,8 @@ as restrições no `composer.json` do seu projeto:
 ```json
 {
   "require": {
-    "php": ">=8.3",
-    "elavora/api-datatype-core": "^3.0",
+    "php": ">=8.4",
+    "elavora/api-datatype-core": "^4.0",
     "elavora/api-datatype-json": "^1.0"
   }
 }
