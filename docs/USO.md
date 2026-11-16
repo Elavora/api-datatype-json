@@ -25,6 +25,18 @@ $valor = new Json('{"status":"ok"}');
 $normalizado = $valor->value();
 ```
 
+## Documentacao do tipo (OPTIONS)
+
+`Json` implementa `Elavora\Api\Framework\Contracts\DescribesType`. O OPTIONS publico da API usa
+`documentedType()` para documentar o campo sem expor o nome da classe PHP. O tipo declara:
+
+- `type`: `string`
+- `format`: `json`
+- `description`: texto JSON valido, nao vazio
+- `example`: `{"name":"api"}`
+
+Quem valida continua sendo `isValid()`.
+
 ## Principais pontos de entrada
 
 - `Elavora\Api\DataTypes\Json`
