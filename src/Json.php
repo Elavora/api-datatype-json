@@ -4,8 +4,25 @@ declare(strict_types=1);
 
 namespace Elavora\Api\DataTypes;
 
-final readonly class Json extends AbstractDataType
+use Elavora\Api\Framework\Contracts\DescribesType;
+
+final readonly class Json extends AbstractDataType implements DescribesType
 {
+    /**
+     * Descreve o tipo para a documentacao publica (OPTIONS).
+     *
+     * @return array<string, mixed>
+     */
+    public static function documentedType(): array
+    {
+        return [
+            'type' => 'string',
+            'format' => 'json',
+            'description' => 'Texto JSON valido (objeto, lista ou valor simples); nao pode ser vazio.',
+            'example' => '{"name":"api"}',
+        ];
+    }
+
     /**
      * Verifica se o valor e uma string JSON valida.
      */
