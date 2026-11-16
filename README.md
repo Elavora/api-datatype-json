@@ -16,18 +16,18 @@ Guia de uso e exemplos: [docs/USO.md](docs/USO.md).
 composer require elavora/api-datatype-json
 ```
 
-Requisitos: PHP 8.3 ou superior e `elavora/api-datatype-core` `^3.0`.
+Requisitos: PHP 8.4 ou superior e `elavora/api-datatype-core` `^4.0`.
 
 Versão `1.0`: atualiza o pacote para o `elavora/api-datatype-core` 2.0 (que usa o `elavora/api-framework` 2.0) e exige
 PHP 8.3. A API pública (`Json`) não muda.
 
 ## Desenvolvimento e testes
 
-Você só precisa de Docker. O ambiente é a imagem `ghcr.io/elavora/php-dev:8.3-latest`: abra o repositório no VS Code
+Você só precisa de Docker. O ambiente é a imagem `ghcr.io/elavora/php-dev:8.4-latest`: abra o repositório no VS Code
 com **Dev Containers: Reopen in Container**, ou rode no PowerShell:
 
 ```powershell
-docker run --rm --mount "type=bind,source=$($PWD.Path),target=/workspace" -w /workspace ghcr.io/elavora/php-dev:8.3-latest sh -lc 'git config --global --add safe.directory /workspace && composer install --no-interaction --prefer-dist && composer check'
+docker run --rm --mount "type=bind,source=$($PWD.Path),target=/workspace" -w /workspace ghcr.io/elavora/php-dev:8.4-latest sh -lc 'git config --global --add safe.directory /workspace && composer install --no-interaction --prefer-dist && composer check'
 ```
 
 Scripts do Composer:
